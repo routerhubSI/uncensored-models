@@ -1,0 +1,23 @@
+# Uncensored Models — the complete index of uncensored and abliterated models
+
+> One page comparing every hosted uncensored and abliterated model variant — exact dated prices, context windows and providers — plus the most-downloaded open-weight releases on Hugging Face. Maintained by RouterHub (an API gateway); competitor models included.
+
+## Key facts
+
+- Hosted variants are OpenAI-compatible (Chat Completions), currently labeled preview by providers.
+- Hosted prices in this index are USD per million tokens, checked 2026-11-02 against https://routerhub.si/models.json — the catalogue is always current.
+- Open-weight download counts were taken from the Hugging Face API on 2026-11-02.
+- Uncensored reduces refusal behavior; it does not guarantee refusal-free output. Behavior is version-dependent.
+- First-party recorded GLM comparisons (standard, uncensored, abliterated) with raw outputs: https://github.com/routerhubSI/routerhub-model-evals
+
+## Companion repos
+
+- https://github.com/routerhubSI/uncensored-ai-api — what an uncensored AI API is, with quickstart and client setup guides
+- https://github.com/routerhubSI/routerhub-model-evals — recorded model comparisons with raw outputs and sandbox scores
+- https://github.com/routerhubSI/glm-5.3-abliterated — GLM 5.3 abliterated deep dive and jailbreak prompt library
+
+## Website
+
+- https://routerhub.si
+- https://routerhub.si/models.json — live catalogue with exact rates
+- https://t.me/routerhubsi
