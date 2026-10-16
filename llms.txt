@@ -16,6 +16,19 @@
 - https://github.com/routerhubSI/routerhub-model-evals — recorded model comparisons with raw outputs and sandbox scores
 - https://github.com/routerhubSI/glm-5.3-abliterated — GLM 5.3 abliterated deep dive and jailbreak prompt library
 
+## Per-model pages
+
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4-pro-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-1017-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4-pro-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/qwen3.8-max-uncensored.md
+
 ## Website
 
 - https://routerhub.si

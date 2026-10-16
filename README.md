@@ -1,8 +1,18 @@
 <div align="center">
 
+<a href="https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models">
+  <img src="./assets/routerhub-banner.png" width="100%" alt="RouterHub — one key for all frontier AI models">
+</a>
+
 # Uncensored Models — every uncensored and abliterated model, with prices (2026)
 
 **An uncensored model is a language model variant with fewer built-in refusals than the standard release — delivered either as a hosted API variant or as open weights. This index lists every hosted uncensored and abliterated variant with dated prices and context windows, plus the most-downloaded open-weight releases, in one comparable table.**
+
+<p align="center">
+  <a href="https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models"><img src="./assets/visit-website.svg" width="208" height="74" alt="Visit RouterHub website"></a>
+  <a href="https://t.me/routerhubsi"><img src="./assets/telegram.svg" width="216" height="74" alt="Join RouterHub on Telegram"></a>
+  <a href="https://routerhub.si/register?next=onboarding&utm_source=github&utm_medium=readme&utm_campaign=uncensored-models"><img src="./assets/get-api-key.svg" width="183" height="74" alt="Get a RouterHub API key"></a>
+</p>
 
 </div>
 
@@ -23,7 +33,7 @@ Every entry is OpenAI-compatible (Chat Completions) and currently labeled **prev
 | `deepseek-v4.1-flash-abliterated` | DeepSeek | $0.30 | $0.055 | $1.25 | 1,000,000 |
 | `deepseek-v4.1-flash-1017-abliterated` | DeepSeek | $0.30 | $0.055 | $1.25 | 1,000,000 |
 | `deepseek-v4-pro-abliterated` | DeepSeek | $0.40 | $0.04 | $1.60 | 1,000,000 |
-| `glm-5.3` | Z.ai (GLM) | $0.20 | $0.12 | $0.63 | 1,048,576 |
+| `glm-5.3-uncensored` | Z.ai (GLM) | $0.20 | $0.12 | $0.63 | — |
 | `glm-5.3-flash-uncensored` | Z.ai (GLM) | $0.15 | $0.0135 | $0.50 | — |
 | `glm-5.3-abliterated` | Z.ai (GLM) | $0.40 | $0.16 | $1.33 | 1,048,576 |
 | `glm-5.3-flash-abliterated` | Z.ai (GLM) | $0.30 | $0.12 | $1.00 | 1,048,576 |
