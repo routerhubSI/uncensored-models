@@ -4,9 +4,9 @@
   <img src="./assets/routerhub-banner.png" width="100%" alt="RouterHub — one key for all frontier AI models">
 </a>
 
-# Uncensored Models — every uncensored and abliterated model, with prices (2026)
+# Uncensored Models — every model, what it does, and where to get it (2026)
 
-**An uncensored model is a language model variant with fewer built-in refusals than the standard release — delivered either as a hosted API variant or as open weights. This index lists every hosted uncensored and abliterated variant with dated prices and context windows, plus the most-downloaded open-weight releases, in one comparable table.**
+**An uncensored model is a language model variant with fewer built-in refusals than the standard release — delivered either as a hosted API variant or as open weights. This is a library of them: browse by family, see what each variant is and does, pick up the free open weights, or use a hosted API variant.**
 
 <p align="center">
   <a href="https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models"><img src="./assets/visit-website.svg" width="208" height="74" alt="Visit RouterHub website"></a>
@@ -18,45 +18,77 @@
 
 ---
 
-**Maintained by [RouterHub](https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models) — an API gateway, not the model owner. Hosted variants listed here include models RouterHub does not serve; open weights include releases by independent researchers. Prices are checked against the [public catalogue](https://routerhub.si/models.json) and dated below.**
+Last updated: **November 2, 2026** · Prices: USD per million tokens · See [Honest limits](#honest-limits).
 
-Last updated: **November 2, 2026** · Prices: USD per million tokens · Behavior always depends on model version, prompt and provider policy — see [Honest limits](#honest-limits).
+## What this library is
 
-## Hosted uncensored models (API variants)
+- **A browsable index of uncensored and abliterated models** — official tuned variants and community abliterated builds, organized by family.
+- **One page per model** under [`models/`](models/) — what it is, what it does, its specs, and every way to get it.
+- **Complete, including what we don't sell.** Community Hugging Face builds with real download counts are listed alongside the hosted variants. RouterHub is an API gateway, not the model owner — it serves the hosted variants listed here and nothing else changes what's in this index.
 
-Every entry is OpenAI-compatible (Chat Completions) and currently labeled **preview** by the provider. "Cached input" is the rate for repeated prompt prefixes.
+Every model gets its own entry:
 
-| Model ID | Family | Input | Cached input | Output | Context window |
-|---|---|---:|---:|---:|---:|
-| `deepseek-v4-pro-uncensored` | DeepSeek | $0.20 | $0.0016 | $0.40 | — |
-| `deepseek-v4.1-flash-uncensored` | DeepSeek | $0.15 | $0.0027 | $0.60 | — |
-| `deepseek-v4.1-flash-abliterated` | DeepSeek | $0.30 | $0.055 | $1.25 | 1,000,000 |
-| `deepseek-v4.1-flash-1017-abliterated` | DeepSeek | $0.30 | $0.055 | $1.25 | 1,000,000 |
-| `deepseek-v4-pro-abliterated` | DeepSeek | $0.40 | $0.04 | $1.60 | 1,000,000 |
-| `glm-5.3-uncensored` | Z.ai (GLM) | $0.20 | $0.12 | $0.63 | — |
-| `glm-5.3-flash-uncensored` | Z.ai (GLM) | $0.15 | $0.0135 | $0.50 | — |
-| `glm-5.3-abliterated` | Z.ai (GLM) | $0.40 | $0.16 | $1.33 | 1,048,576 |
-| `glm-5.3-flash-abliterated` | Z.ai (GLM) | $0.30 | $0.12 | $1.00 | 1,048,576 |
-| `qwen3.8-max-uncensored` | Qwen | $0.25 | $0.031 | $0.75 | 1,000,000 |
+- [`glm-5.3-uncensored`](models/glm-5.3-uncensored.md) · [`glm-5.3-flash-uncensored`](models/glm-5.3-flash-uncensored.md) · [`glm-5.3-abliterated`](models/glm-5.3-abliterated.md) · [`glm-5.3-flash-abliterated`](models/glm-5.3-flash-abliterated.md)
+- [`deepseek-v4-pro-uncensored`](models/deepseek-v4-pro-uncensored.md) · [`deepseek-v4.1-flash-uncensored`](models/deepseek-v4.1-flash-uncensored.md) · [`deepseek-v4.1-flash-abliterated`](models/deepseek-v4.1-flash-abliterated.md) · [`deepseek-v4.1-flash-1017-abliterated`](models/deepseek-v4.1-flash-1017-abliterated.md) · [`deepseek-v4-pro-abliterated`](models/deepseek-v4-pro-abliterated.md)
+- [`qwen3.8-max-uncensored`](models/qwen3.8-max-uncensored.md)
 
-*Rates rounded from the catalogue; exact per-token values live in [`models.json`](https://routerhub.si/models.json). "—" means the catalogue does not publish that limit — check it before sizing prompts. Availability is preview and can change.*
+## GLM (Z.ai)
 
-Model-by-model notes:
+Z.ai's GLM 5.3 family ships official uncensored variants (tuned to refuse less) and there is an active community abliteration scene around the Flash release. The abliterated variants have publicly recorded evaluation runs — see [Verify before you trust](#verify-before-you-trust).
 
-- ### `deepseek-v4-pro-uncensored`
-  DeepSeek's flagship-size uncensored variant. Cheapest hosted uncensored option in the index at this time.
-- ### `glm-5.3-abliterated`
-  Z.ai GLM 5.3 with abliteration applied — the most independently verified entry in this index: recorded comparisons with raw outputs and sandbox-scored acceptance runs are public in [model evals](https://github.com/routerhubSI/routerhub-model-evals). 917,504-token max input, 131,072 max output.
-- ### `glm-5.3-flash-abliterated`
-  The fast, cheap abliterated GLM. The classic "cheap uncensored chatbot" profile — recorded runs exist in [model evals](https://github.com/routerhubSI/routerhub-model-evals).
+**Hosted variants** — dated prices checked 2026-11-02:
 
-More hosted variants are added as providers release them. Standard (non-uncensored) frontier models — Claude, GPT, Gemini, Grok, DeepSeek, GLM and Qwen — are available on the same key; see the [full catalogue](https://routerhub.si/models?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models).
+| Model | Input | Cached input | Output | Context window |
+|---|---:|---:|---:|---:|
+| `glm-5.3-uncensored` | $0.20 | $0.12 | $0.63 | not published |
+| `glm-5.3-flash-uncensored` | $0.15 | $0.0135 | $0.50 | not published |
+| `glm-5.3-abliterated` | $0.40 | $0.16 | $1.33 | 1,048,576 |
+| `glm-5.3-flash-abliterated` | $0.30 | $0.12 | $1.00 | 1,048,576 |
 
-## Open weights on Hugging Face
+**Open weights on Hugging Face** (download counts checked 2026-11-02):
 
-The abliterated ecosystem lives largely on Hugging Face. These are the most-downloaded uncensored/abliterated releases as of **November 2, 2026** (download counts via the Hugging Face API on that date). Most are community GGUF quantizations — check each repo's license and model card before use.
+| Build | Downloads | Likes |
+|---|---:|---:|
+| [BoldingBuilds/orcarouter_GLM-5.3-Flash-Uncensored-GGUF](https://huggingface.co/BoldingBuilds/orcarouter_GLM-5.3-Flash-Uncensored-GGUF) | 504,769 | 37 |
+| [GCSA-AiLab/GLM-5.3-Flash-Uncensored-RCO-GSQ-GGUF](https://huggingface.co/GCSA-AiLab/GLM-5.3-Flash-Uncensored-RCO-GSQ-GGUF) | 54,592 | 10 |
+| [huihui-ai/Huihui-GLM-5.3-Flash-abliterated-GGUF](https://huggingface.co/huihui-ai/Huihui-GLM-5.3-Flash-abliterated-GGUF) | 44,757 | 343 |
+| [DavidAU/GLM-4.7-Flash-Uncensored-Heretic-NEO-CODE-Imatrix-MAX-GGUF](https://huggingface.co/DavidAU/GLM-4.7-Flash-Uncensored-Heretic-NEO-CODE-Imatrix-MAX-GGUF) | 36,687 | 441 |
+| [AliceThirty/GLM-5.3-Flash-UNCENSORED-GGUF](https://huggingface.co/AliceThirty/GLM-5.3-Flash-UNCENSORED-GGUF) | 29,302 | 22 |
+| [orcarouter/GLM-5.3-Flash-Uncensored-FP8](https://huggingface.co/orcarouter/GLM-5.3-Flash-Uncensored-FP8) | 25,518 | 316 |
+| [softwareweaver/GLM-5.3-Uncensored-GGUF](https://huggingface.co/softwareweaver/GLM-5.3-Uncensored-GGUF) | 22,161 | 17 |
+| [audnai/penclaw-GLM-5.3-abliterated](https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated) | 2,860 | 521 |
 
-| Model | Downloads | Likes |
+## DeepSeek
+
+DeepSeek's uncensored program covers both the flagship size (`v4-pro`) and the fast Flash model, in tuned and abliterated flavors — including a pinned October 2026 abliterated build for reproducible behavior.
+
+**Hosted variants** — dated prices checked 2026-11-02:
+
+| Model | Input | Cached input | Output | Context window |
+|---|---:|---:|---:|---:|
+| `deepseek-v4-pro-uncensored` | $0.20 | $0.0016 | $0.40 | not published |
+| `deepseek-v4.1-flash-uncensored` | $0.15 | $0.0027 | $0.60 | not published |
+| `deepseek-v4.1-flash-abliterated` | $0.30 | $0.055 | $1.25 | 1,000,000 |
+| `deepseek-v4.1-flash-1017-abliterated` | $0.30 | $0.055 | $1.25 | 1,000,000 |
+| `deepseek-v4-pro-abliterated` | $0.40 | $0.04 | $1.60 | 1,000,000 |
+
+**Open weights on Hugging Face** (download counts checked 2026-11-02):
+
+| Build | Downloads | Likes |
+|---|---:|---:|
+| [Abiray/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-IQ2_XXS-GGUF](https://huggingface.co/Abiray/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-IQ2_XXS-GGUF) | 366,471 | 67 |
+| [huihui-ai/Huihui-DeepSeek-V4-Flash-0731-abliterated-GGUF](https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-0731-abliterated-GGUF) | 365,035 | 235 |
+| [huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF](https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF) | 284,206 | 149 |
+| [audreyt/DeepSeek-V4.1-Flash-Abliterated-GGUF](https://huggingface.co/audreyt/DeepSeek-V4.1-Flash-Abliterated-GGUF) | 80,099 | 14 |
+| [pyrodog/DeepSeek-V4.1-Flash-UNCENSORED-DwarfStar-Q2](https://huggingface.co/pyrodog/DeepSeek-V4.1-Flash-UNCENSORED-DwarfStar-Q2) | 49,457 | 20 |
+| [Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF](https://huggingface.co/Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF) | 37,641 | 11 |
+| [dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8](https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8) | 33,180 | 818 |
+
+## Qwen
+
+The largest uncensored ecosystem on Hugging Face. The hosted `qwen3.8-max-uncensored` variant ($0.25 input / $0.75 output per million tokens, 1,000,000-token context, checked 2026-11-02) gives you the max-size model without a GPU; community builds below cover the 27B, 35B and Flash generations.
+
+| Build | Downloads | Likes |
 |---|---:|---:|
 | [SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF](https://huggingface.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF) | 3,553,530 | 609 |
 | [huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF](https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF) | 3,249,724 | 1,664 |
@@ -64,18 +96,27 @@ The abliterated ecosystem lives largely on Hugging Face. These are the most-down
 | [HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF](https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF) | 2,379,869 | 2,209 |
 | [huihui-ai/Huihui-Qwen3.6-35B-A3B-abliterated-MTP-GGUF](https://huggingface.co/huihui-ai/Huihui-Qwen3.6-35B-A3B-abliterated-MTP-GGUF) | 2,297,059 | 70 |
 | [DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF](https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF) | 1,967,913 | 1,312 |
-| [mradermacher/Ornith-1.5-9B-uncensored-GGUF](https://huggingface.co/mradermacher/Ornith-1.5-9B-uncensored-GGUF) | 1,709,749 | 265 |
 | [DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF](https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF) | 1,356,658 | 2,308 |
 | [orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF](https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF) | 1,149,873 | 1,246 |
 | [0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF](https://huggingface.co/0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF) | 1,129,666 | 819 |
 | [HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive](https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive) | 1,111,177 | 4,075 |
-| [HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive](https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive) | 801,900 | 1,521 |
 
-Want hosted access instead of running weights yourself? RouterHub serves several of the base models above as uncensored API variants — no GPU, pay per token. [Get an API key →](https://routerhub.si/register?next=onboarding&utm_source=github&utm_medium=readme&utm_campaign=uncensored-models)
+## More community releases
 
-## How to connect
+Other families keep getting uncensored builds. Current standouts (downloads checked 2026-11-02):
 
-Works with any OpenAI-compatible client — change two values: base URL and key.
+- [mradermacher/Ornith-1.5-9B-uncensored-GGUF](https://huggingface.co/mradermacher/Ornith-1.5-9B-uncensored-GGUF) — 1,709,749 downloads
+- [HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive](https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive) — 801,900 downloads
+- [DavidAU/Llama-3.2-8X3B-MOE-Dark-Champion-Instruct-uncensored-abliterated-18.4B-GGUF](https://huggingface.co/DavidAU/Llama-3.2-8X3B-MOE-Dark-Champion-Instruct-uncensored-abliterated-18.4B-GGUF) — 39,069 downloads
+- [mradermacher/gemma-4-12B-it-abliterated-uncensored-GGUF](https://huggingface.co/mradermacher/gemma-4-12B-it-abliterated-uncensored-GGUF) — 21,575 downloads
+
+Most are community GGUF quantizations — check each repo's license and model card before use, and re-check behavior after upstream releases.
+
+## Running them
+
+**Free (open weights):** grab any build above and run it locally with llama.cpp, Ollama or LM Studio. Downloads and likes shown are all-time counts from the Hugging Face API, checked 2026-11-02 — popularity is not a quality measure.
+
+**Hosted (no GPU):** every variant in the hosted tables is served by RouterHub through one OpenAI- and Anthropic-compatible endpoint — pay per token. Setup guides in [uncensored-ai-api](https://github.com/routerhubSI/uncensored-ai-api).
 
 ```python
 import os
@@ -87,13 +128,11 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="MODEL_ID",  # any uncensored model ID above
+    model="glm-5.3-flash-abliterated",  # any variant ID above
     messages=[{"role": "user", "content": "Write a noir paragraph about a lighthouse."}],
 )
 print(response.choices[0].message.content)
 ```
-
-Anthropic-compatible (Claude Code) and OpenAI-compatible clients are both supported — setup guides in [uncensored-ai-api](https://github.com/routerhubSI/uncensored-ai-api).
 
 ## Verify before you trust
 
@@ -110,18 +149,23 @@ Both describe reduced refusal behavior. Neither guarantees refusal-free output. 
 
 - **No provider guarantees a model will never refuse.** Uncensored and abliterated variants reduce refusal behavior; they do not remove the need for evaluation, guardrails or human review.
 - **Behavior is version-dependent.** Upstream updates change behavior; re-evaluate after releases.
-- **Prices and availability rotate.** The table above is dated — confirm current rates in the [catalogue](https://routerhub.si/models.json) before committing.
-- **Open-weight download counts change** and popularity is not a quality measure.
+- **Prices and availability rotate.** Hosted rates above are dated — confirm current rates in the [catalogue](https://routerhub.si/models.json) before committing.
+- **Open-weight download counts change** and include quantization re-uploads; they measure interest, not quality.
+- **This index is not exhaustive.** New uncensored releases appear weekly on Hugging Face; missing something notable? Open an issue.
 
 ## FAQ
 
-**Can I run these models locally instead?**
+**Why would I use this library?**
 
-Yes — the open-weight section links community releases you can run yourself. RouterHub exists for the case where you would rather pay per token than manage GPUs.
+To find out which uncensored or abliterated models actually exist, what each one is for, and the fastest way to get it — without reading a dozen separate model cards.
 
-**Why are competitors listed here?**
+**Why are competitors' and community builds listed here?**
 
-Because the point of this index is to be complete and honest. If you maintain or discover an uncensored model that belongs here, open an issue.
+Because an index is only useful if it's complete. Hosted access is listed where it exists; open weights are listed everywhere they exist.
+
+**Can I run these models locally instead of using the API?**
+
+Yes — that's most of the point of the open-weights tables. RouterHub exists for the case where you would rather pay per token than manage GPUs.
 
 **Does uncensored mean it will do anything I ask?**
 
@@ -131,7 +175,7 @@ No. Refusal behavior varies by model, version and prompt. You remain responsible
 
 <div align="center">
 
-**Star this repository if it helped you compare uncensored models.**
+**Star this repository if it helped you find a model.**
 
 <sub>RouterHub is an independent API gateway. Model names and trademarks belong to their respective owners. Not affiliated with GitHub, OpenAI, Anthropic, Google, xAI, DeepSeek, Z.ai, Qwen, Moonshot AI or Hugging Face. Use responsibly and follow the terms that apply to you.</sub>
 

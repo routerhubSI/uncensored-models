@@ -1,11 +1,12 @@
-# Uncensored Models — the complete index of uncensored and abliterated models
+# Uncensored Models — the library of uncensored and abliterated models
 
-> One page comparing every hosted uncensored and abliterated model variant — exact dated prices, context windows and providers — plus the most-downloaded open-weight releases on Hugging Face. Maintained by RouterHub (an API gateway); competitor models included.
+> A browsable library of every uncensored and abliterated model — what each variant is and does, organized by family, with free open-weight builds on Hugging Face and hosted API variants with dated prices. Maintained by RouterHub (an API gateway); community and competitor builds included.
 
 ## Key facts
 
+- The library indexes both official tuned variants (uncensored) and community weight-level builds (abliterated), for the GLM, DeepSeek, Qwen, Gemma and Llama families.
 - Hosted variants are OpenAI-compatible (Chat Completions), currently labeled preview by providers.
-- Hosted prices in this index are USD per million tokens, checked 2026-11-02 against https://routerhub.si/models.json — the catalogue is always current.
+- Hosted prices are USD per million tokens, checked 2026-11-02 against https://routerhub.si/models.json — the catalogue is always current.
 - Open-weight download counts were taken from the Hugging Face API on 2026-11-02.
 - Uncensored reduces refusal behavior; it does not guarantee refusal-free output. Behavior is version-dependent.
 - First-party recorded GLM comparisons (standard, uncensored, abliterated) with raw outputs: https://github.com/routerhubSI/routerhub-model-evals
@@ -18,15 +19,15 @@
 
 ## Per-model pages
 
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-uncensored.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-abliterated.md
+- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-abliterated.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4-pro-uncensored.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-uncensored.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-abliterated.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4.1-flash-1017-abliterated.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/deepseek-v4-pro-abliterated.md
-- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-uncensored.md
-- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-uncensored.md
-- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-abliterated.md
-- https://github.com/routerhubSI/uncensored-models/blob/main/models/glm-5.3-flash-abliterated.md
 - https://github.com/routerhubSI/uncensored-models/blob/main/models/qwen3.8-max-uncensored.md
 
 ## Website

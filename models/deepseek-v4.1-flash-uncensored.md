@@ -1,43 +1,36 @@
 # deepseek-v4.1-flash-uncensored
 
-> Fast DeepSeek 4.1 Flash variant tuned to refuse less.
+> Fast DeepSeek 4.1 Flash variant tuned to refuse less — good general-purpose uncensored workhorse.
+
+**Family:** DeepSeek · **Type:** Uncensored — tuned to refuse less. · **Hosted availability:** preview
+
+## Specs
+
+Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates are the price for repeated prompt prefixes.
 
 | | |
 |---|---|
-| Provider | DeepSeek |
-| Protocol | Chat Completions (OpenAI-compatible) |
 | Input | $0.15 / M tokens |
 | Cached input | $0.0027 / M tokens |
 | Output | $0.60 / M tokens |
 | Context window | not published — check the catalogue before sizing prompts |
-| Availability | preview |
 
-Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates vary in precision; the catalogue holds the exact values.
+## Get it
 
-No recorded runs for this variant yet — the shared task and harness are public in [model evals](https://github.com/routerhubSI/routerhub-model-evals).
+### Open weights (free, runs locally)
 
-## How to call
+Community GGUF builds, all-time download counts checked **2026-11-02** via the Hugging Face API. Check each repo's license and model card before use:
 
-```python
-import os
-from openai import OpenAI
+| Build | Downloads | Likes |
+|---|---:|---:|
+| [pyrodog/DeepSeek-V4.1-Flash-UNCENSORED-DwarfStar-Q2](https://huggingface.co/pyrodog/DeepSeek-V4.1-Flash-UNCENSORED-DwarfStar-Q2) | 49,457 | 20 |
+| [Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF](https://huggingface.co/Adolphsson/DeepSeek-V4.1-Flash-UNCENSORED-GGUF) | 37,641 | 11 |
+| [dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8](https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8) | 33,180 | 818 |
 
-client = OpenAI(
-    api_key=os.environ["ROUTERHUB_API_KEY"],
-    base_url=os.environ["ROUTERHUB_BASE_URL"],  # copy from the dashboard
-)
 
-response = client.chat.completions.create(
-    model="deepseek-v4.1-flash-uncensored",
-    messages=[{"role": "user", "content": "Reply with exactly OK."}],
-)
-print(response.choices[0].message.content)
-```
-
-Anthropic-compatible and coding-agent setup guides: [uncensored-ai-api](https://github.com/routerhubSI/uncensored-ai-api).
 
 ## Related
 
-- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this repository's comparison table
-- [RouterHub](https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models&utm_content=deepseek-v4.1-flash-uncensored)
-- [Telegram](https://t.me/routerhubsi)
+- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this library
+- [Setup guides](https://github.com/routerhubSI/uncensored-ai-api) — OpenAI- and Anthropic-compatible clients, Claude Code and coding agents
+- [Telegram](https://t.me/routerhubsi) — model updates and pricing changes

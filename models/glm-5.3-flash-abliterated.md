@@ -2,42 +2,36 @@
 
 > Fast, cheap abliterated GLM — the classic cheap-uncensored-chatbot profile.
 
+**Family:** Z.ai (GLM) · **Type:** Abliterated — refusal direction removed from the weights. · **Hosted availability:** preview
+
+## Specs
+
+Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates are the price for repeated prompt prefixes.
+
 | | |
 |---|---|
-| Provider | Z.ai (GLM) |
-| Protocol | Chat Completions (OpenAI-compatible) |
 | Input | $0.30 / M tokens |
 | Cached input | $0.12 / M tokens |
 | Output | $1.00 / M tokens |
 | Context window | 1,048,576 total (917,504 max input, 131,072 max output) |
-| Availability | preview |
 
-Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates vary in precision; the catalogue holds the exact values.
+## Get it
 
-**Verified runs exist** for this variant in [model evals](https://github.com/routerhubSI/routerhub-model-evals), including its classic cheap-uncensored-chatbot profile.
+### Open weights (free, runs locally)
 
-## How to call
+Community GGUF builds, all-time download counts checked **2026-11-02** via the Hugging Face API. Check each repo's license and model card before use:
 
-```python
-import os
-from openai import OpenAI
+| Build | Downloads | Likes |
+|---|---:|---:|
+| [huihui-ai/Huihui-GLM-5.3-Flash-abliterated-GGUF](https://huggingface.co/huihui-ai/Huihui-GLM-5.3-Flash-abliterated-GGUF) | 44,757 | 343 |
+| [alesha-pro/GLM-5.3-Flash-abliterated-Maya-M-GGUF](https://huggingface.co/alesha-pro/GLM-5.3-Flash-abliterated-Maya-M-GGUF) | 14,308 | 4 |
 
-client = OpenAI(
-    api_key=os.environ["ROUTERHUB_API_KEY"],
-    base_url=os.environ["ROUTERHUB_BASE_URL"],  # copy from the dashboard
-)
+---
 
-response = client.chat.completions.create(
-    model="glm-5.3-flash-abliterated",
-    messages=[{"role": "user", "content": "Reply with exactly OK."}],
-)
-print(response.choices[0].message.content)
-```
-
-Anthropic-compatible and coding-agent setup guides: [uncensored-ai-api](https://github.com/routerhubSI/uncensored-ai-api).
+**Recorded runs exist** for this variant in [model evals](https://github.com/routerhubSI/routerhub-model-evals).
 
 ## Related
 
-- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this repository's comparison table
-- [RouterHub](https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models&utm_content=glm-5.3-flash-abliterated)
-- [Telegram](https://t.me/routerhubsi)
+- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this library
+- [Setup guides](https://github.com/routerhubSI/uncensored-ai-api) — OpenAI- and Anthropic-compatible clients, Claude Code and coding agents
+- [Telegram](https://t.me/routerhubsi) — model updates and pricing changes

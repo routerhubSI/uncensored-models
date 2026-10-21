@@ -1,43 +1,37 @@
 # glm-5.3-flash-uncensored
 
-> Fast GLM 5.3 Flash variant tuned to refuse less.
+> Fast GLM 5.3 Flash variant tuned to refuse less — the cheap, quick option for chat and high-volume tasks.
+
+**Family:** Z.ai (GLM) · **Type:** Uncensored — tuned to refuse less. · **Hosted availability:** preview
+
+## Specs
+
+Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates are the price for repeated prompt prefixes.
 
 | | |
 |---|---|
-| Provider | Z.ai (GLM) |
-| Protocol | Chat Completions (OpenAI-compatible) |
 | Input | $0.15 / M tokens |
 | Cached input | $0.0135 / M tokens |
 | Output | $0.50 / M tokens |
 | Context window | not published — check the catalogue before sizing prompts |
-| Availability | preview |
 
-Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates vary in precision; the catalogue holds the exact values.
+## Get it
 
-No recorded runs for this variant yet — the shared task and harness are public in [model evals](https://github.com/routerhubSI/routerhub-model-evals).
+### Open weights (free, runs locally)
 
-## How to call
+Community GGUF builds, all-time download counts checked **2026-11-02** via the Hugging Face API. Check each repo's license and model card before use:
 
-```python
-import os
-from openai import OpenAI
+| Build | Downloads | Likes |
+|---|---:|---:|
+| [BoldingBuilds/orcarouter_GLM-5.3-Flash-Uncensored-GGUF](https://huggingface.co/BoldingBuilds/orcarouter_GLM-5.3-Flash-Uncensored-GGUF) | 504,769 | 37 |
+| [GCSA-AiLab/GLM-5.3-Flash-Uncensored-RCO-GSQ-GGUF](https://huggingface.co/GCSA-AiLab/GLM-5.3-Flash-Uncensored-RCO-GSQ-GGUF) | 54,592 | 10 |
+| [AliceThirty/GLM-5.3-Flash-UNCENSORED-GGUF](https://huggingface.co/AliceThirty/GLM-5.3-Flash-UNCENSORED-GGUF) | 29,302 | 22 |
+| [orcarouter/GLM-5.3-Flash-Uncensored-FP8](https://huggingface.co/orcarouter/GLM-5.3-Flash-Uncensored-FP8) | 25,518 | 316 |
 
-client = OpenAI(
-    api_key=os.environ["ROUTERHUB_API_KEY"],
-    base_url=os.environ["ROUTERHUB_BASE_URL"],  # copy from the dashboard
-)
 
-response = client.chat.completions.create(
-    model="glm-5.3-flash-uncensored",
-    messages=[{"role": "user", "content": "Reply with exactly OK."}],
-)
-print(response.choices[0].message.content)
-```
-
-Anthropic-compatible and coding-agent setup guides: [uncensored-ai-api](https://github.com/routerhubSI/uncensored-ai-api).
 
 ## Related
 
-- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this repository's comparison table
-- [RouterHub](https://routerhub.si/?utm_source=github&utm_medium=readme&utm_campaign=uncensored-models&utm_content=glm-5.3-flash-uncensored)
-- [Telegram](https://t.me/routerhubsi)
+- [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this library
+- [Setup guides](https://github.com/routerhubSI/uncensored-ai-api) — OpenAI- and Anthropic-compatible clients, Claude Code and coding agents
+- [Telegram](https://t.me/routerhubsi) — model updates and pricing changes

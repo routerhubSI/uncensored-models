@@ -8,7 +8,7 @@ Copy-paste values for GitHub and social previews.
 
 **Description (GitHub, ≤350 characters):**
 
-> Every uncensored and abliterated AI model in one index — hosted API variants with dated prices and context windows, plus the most-downloaded open weights. Maintained by RouterHub.
+> The uncensored model library — every uncensored and abliterated model, what it does, free open weights on Hugging Face and hosted API access, in one index. Maintained by RouterHub.
 
 **Website:**
 
