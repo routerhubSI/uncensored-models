@@ -1,12 +1,14 @@
 # qwen3.8-max-uncensored
 
-> Qwen 3.8 Max uncensored variant — long-context (up to 1M tokens), max-size Qwen with relaxed refusal behavior.
+> Qwen 3.8 Max uncensored — max-size Qwen with relaxed refusals and up to 1M-token context.
 
-**Family:** Qwen · **Type:** Uncensored — tuned to refuse less. · **Hosted availability:** preview
+**Family:** Qwen · **Type:** Uncensored — tuned to refuse less · **Hosted availability:** preview
+
+## What it's good for
+
+Very long documents and conversations (up to 1M tokens) on the max-size Qwen — or run the community GGUF builds below locally.
 
 ## Specs
-
-Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json). Cached-input rates are the price for repeated prompt prefixes.
 
 | | |
 |---|---|
@@ -15,11 +17,35 @@ Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/
 | Output | $0.75 / M tokens |
 | Context window | 1,000,000 total (983,000 max input, 131,000 max output) |
 
+Prices checked **2026-11-02** against the [live catalogue](https://routerhub.si/models.json) — the catalogue holds the exact per-token values.
+
 ## Get it
+
+### Hosted API (no GPU)
+
+Served by RouterHub as `qwen3.8-max-uncensored` — one OpenAI- and Anthropic-compatible endpoint, pay per token.
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ["ROUTERHUB_API_KEY"],
+    base_url=os.environ["ROUTERHUB_BASE_URL"],  # copy from the dashboard
+)
+
+response = client.chat.completions.create(
+    model="qwen3.8-max-uncensored",
+    messages=[{"role": "user", "content": "Reply with exactly OK."}],
+)
+print(response.choices[0].message.content)
+```
+
+**[Get an API key](https://routerhub.si/register?next=onboarding&utm_source=github&utm_medium=readme&utm_campaign=uncensored-models&utm_content=qwen3.8-max-uncensored)** · [Setup guides](https://github.com/routerhubSI/uncensored-ai-api) · [Live rates](https://routerhub.si/models.json)
 
 ### Open weights (free, runs locally)
 
-Community GGUF builds, all-time download counts checked **2026-11-02** via the Hugging Face API. Check each repo's license and model card before use:
+Community GGUF builds — all-time download counts checked **2026-11-02** via the Hugging Face API. Check each repo's license and model card before use:
 
 | Build | Downloads | Likes |
 |---|---:|---:|
@@ -31,8 +57,11 @@ Community GGUF builds, all-time download counts checked **2026-11-02** via the H
 
 
 
+## Compared to
+
+Community builds of other bases are listed in the [main index](https://github.com/routerhubSI/uncensored-models).
+
 ## Related
 
 - [Uncensored models index](https://github.com/routerhubSI/uncensored-models) — this library
-- [Setup guides](https://github.com/routerhubSI/uncensored-ai-api) — OpenAI- and Anthropic-compatible clients, Claude Code and coding agents
 - [Telegram](https://t.me/routerhubsi) — model updates and pricing changes
