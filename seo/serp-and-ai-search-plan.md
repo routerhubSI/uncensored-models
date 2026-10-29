@@ -9,7 +9,7 @@ Goal: rank for **uncensored models**, **abliterated models** and every "[model] 
 | uncensored models | Commercial/informational | README hosted table |
 | uncensored model | Informational | README definition block |
 | abliterated models | Commercial | Hosted table + open-weights section |
-| uncensored models 2026 | Informational | H1 + dated tables |
+| uncensored models 2026 | Informational | Dated tables + "Last updated" line |
 | glm 5.3 abliterated | Commercial | `models/glm-5.3-abliterated.md` |
 | glm 5.3 flash abliterated price | Commercial | `models/glm-5.3-flash-abliterated.md` |
 | deepseek uncensored api | Commercial | `models/deepseek-v4-*.md` |

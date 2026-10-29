@@ -4,7 +4,7 @@
   <img src="./assets/routerhub-banner.png" width="100%" alt="RouterHub — one key for all frontier AI models">
 </a>
 
-# Uncensored Models — every model, what it does, and where to get it (2026)
+# Uncensored Models — every model, what it does, and where to get it
 
 **An uncensored model is a language model variant with fewer built-in refusals than the standard release — delivered either as a hosted API variant or as open weights. This is a library of them: browse by family, see what each variant is and does, pick up the free open weights, or use a hosted API variant.**
 

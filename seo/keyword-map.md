@@ -30,7 +30,7 @@ This phrasing appears in the repo name, description, README intro, per-model pag
 | glm 5.3 flash abliterated | `models/glm-5.3-flash-abliterated.md` |
 | deepseek uncensored / abliterated | `models/deepseek-v4-*.md` pages |
 | qwen3.8 uncensored | `models/qwen3.8-max-uncensored.md` |
-| uncensored models 2026 | H1 + dated tables |
+| uncensored models 2026 | Dated tables + "Last updated" line |
 | best uncensored models | Comparison table with dated prices |
 | uncensored model api | Hosted table + How to connect |
 | uncensored vs abliterated | Dedicated section + companion repo `docs/02` |
