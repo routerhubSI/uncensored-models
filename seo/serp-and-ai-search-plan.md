@@ -37,7 +37,7 @@ Goal: rank for **uncensored models**, **abliterated models** and every "[model] 
 6. **Internal links** — README links every per-model page; each page links back to the index.
 7. **External links** only to RouterHub, Hugging Face, Telegram and companion repos.
 8. **No keyword stuffing** — the phrase appears where it reads naturally.
-9. **Honest limits** section always present.
+9. **Notes** (limits) section always present.
 10. **Consistent entity name** — always "RouterHub".
 
 ## AI answer engine (GEO/AEO) rules
