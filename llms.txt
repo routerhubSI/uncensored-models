@@ -4,7 +4,7 @@
 
 ## Key facts
 
-- The library indexes both official tuned variants (uncensored) and community weight-level builds (abliterated), for the GLM, DeepSeek, Qwen, Gemma and Llama families.
+- The library indexes both official tuned variants (uncensored) and community weight-level builds (abliterated), for the GLM, DeepSeek, Qwen, Kimi, Gemma and Llama families.
 - Hosted variants are OpenAI-compatible (Chat Completions), currently labeled preview by providers.
 - Hosted prices are USD per million tokens, checked 2026-11-02 against https://routerhub.si/models.json — the catalogue is always current.
 - Open-weight download counts were taken from the Hugging Face API on 2026-11-02.
@@ -16,6 +16,7 @@
 - https://github.com/routerhubSI/uncensored-ai-api — what an uncensored AI API is, with quickstart and client setup guides
 - https://github.com/routerhubSI/routerhub-model-evals — recorded model comparisons with raw outputs and sandbox scores
 - https://github.com/routerhubSI/glm-5.3-abliterated — GLM 5.3 abliterated deep dive and jailbreak prompt library
+- https://github.com/routerhubSI/kimi-uncensored — every uncensored and abliterated Kimi build: hosted K3.1 Pro Uncensored, K3.1 Pro and K3.0 open weights
 
 ## Per-model pages
 

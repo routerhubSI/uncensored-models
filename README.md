@@ -27,6 +27,7 @@ This repository indexes uncensored and abliterated language models — official 
 - [`glm-5.3-uncensored`](models/glm-5.3-uncensored.md) · [`glm-5.3-flash-uncensored`](models/glm-5.3-flash-uncensored.md) · [`glm-5.3-abliterated`](models/glm-5.3-abliterated.md) · [`glm-5.3-flash-abliterated`](models/glm-5.3-flash-abliterated.md)
 - [`deepseek-v4-pro-uncensored`](models/deepseek-v4-pro-uncensored.md) · [`deepseek-v4.1-flash-uncensored`](models/deepseek-v4.1-flash-uncensored.md) · [`deepseek-v4.1-flash-abliterated`](models/deepseek-v4.1-flash-abliterated.md) · [`deepseek-v4.1-flash-1017-abliterated`](models/deepseek-v4.1-flash-1017-abliterated.md) · [`deepseek-v4-pro-abliterated`](models/deepseek-v4-pro-abliterated.md)
 - [`qwen3.8-max-uncensored`](models/qwen3.8-max-uncensored.md)
+- Kimi has its own dedicated index: [`kimi-uncensored`](https://github.com/routerhubSI/kimi-uncensored) — hosted K3.1 Pro Uncensored, K3.1 Pro and K3.0 abliterated open weights
 
 To add or correct an entry, open an issue.
 
@@ -98,6 +99,10 @@ The largest uncensored ecosystem on Hugging Face. The hosted `qwen3.8-max-uncens
 | [orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF](https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF) | 1,149,873 | 1,246 |
 | [0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF](https://huggingface.co/0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF) | 1,129,666 | 819 |
 | [HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive](https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive) | 1,111,177 | 4,075 |
+
+## Kimi (Moonshot AI)
+
+Moonshot's Kimi has its own dedicated index — [kimi-uncensored](https://github.com/routerhubSI/kimi-uncensored) — covering the hosted K3.1 Pro Uncensored variant ($0.30 input / $1.50 output per million tokens, checked 2026-11-12), the weight-level abliterated K3.1 Pro build, and the K3/K3.0 GGUF builds that run on consumer hardware. Notably, Moonshot removed hacking-related training data before publishing the K3.1 Pro open weights.
 
 ## More community releases
 
