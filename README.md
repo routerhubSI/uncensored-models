@@ -102,7 +102,9 @@ The largest uncensored ecosystem on Hugging Face. The hosted `qwen3.8-max-uncens
 
 ## Kimi (Moonshot AI)
 
-Moonshot's Kimi has its own dedicated index — [kimi-uncensored](https://github.com/routerhubSI/kimi-uncensored) — covering the hosted K3.1 Pro Uncensored variant ($0.30 input / $1.50 output per million tokens, checked 2026-11-12), the weight-level abliterated K3.1 Pro build, and the K3/K3.0 GGUF builds that run on consumer hardware. Notably, Moonshot removed hacking-related training data before publishing the K3.1 Pro open weights.
+Moonshot's Kimi has its own dedicated index — [kimi-uncensored](https://github.com/routerhubSI/kimi-uncensored) — covering the hosted K3.1 Pro Uncensored variant ($0.30 input / $1.50 output per million tokens), the weight-level abliterated K3.1 Pro build, and the K3/K3.0 GGUF builds that run on consumer hardware. Notably, Moonshot removed hacking-related training data before publishing the K3.1 Pro open weights.
+
+DeepSeek has its own dedicated index — [deepseek-uncensored](https://github.com/routerhubSI/deepseek-uncensored) — covering the pinned V4.1 Flash 1017 Abliterated build (third on the AA Cyber benchmark, behind only GPT-6 Sol and Kimi K3.1 Pro), the V4 Pro abliterated variant, the tuned uncensored variants, and a cyber red-team prompt battery.
 
 ## More community releases
 
